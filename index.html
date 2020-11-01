@@ -6,17 +6,61 @@
         <title>K3-Sticky-BBG</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <script></script>
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
         <style>
+        body {
+            margin: 0;
+            background-color: #ffd1dc;
+        }
+        .navbar {
+            background-color: #b8ffc2;
+        }
+        .border {
+            background-color: #b8ffc2;
+            height: 80px;
+        }
+        .main {
+            background-color: #c4d1ff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .intro {
+            display: flex;
+            align-self: center;
+            font-size: 2.5vw;
+            font-family: monospace;
+            overflow: hidden;
+            border-right: .20em solid purple;
+            white-space: nowrap;
+            margin: 0, auto;
+            letter-spacing: 0.08em;
+            animation:
+                typing 3s steps(40, end),
+                blink-caret .75s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0 }
+            to {width: 100%}
+        }
+        @keyframes blink-caret {
+            from, to {border-color: transparent}
+            50% {border-color: purple;}
+        }
         </style>
+        <script scr="js/bootstrap.min.js"></script>
     </head>
     <body>
-        <div class="container"></div>
-            <div class="row top">Hello!</div>
-            <div class="row middle"></div>
-            <div class="row bottom">test</div>
-
-        <script src="" async defer></script>
+        <div class="container navbar">
+            <a href="#">K3Art</a>
+            <a href="#">K3StickyBBG</a>
+        </div>
+        <div class="container main">
+            <img src="images/k3.jpg" style="max-width: 200px; display: flex; align-self: center"></img>
+            <div class="intro">Artist . Designer . Creator . Maker . Architect</div>
+        </div>
+        <div class="container navbar">
+            <a href="#">Next</a>
+        </div>
     </body>
 </html>
