@@ -3,32 +3,45 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>K3-Sticky-BBG</title>
+        <title>K3Art-StickyBubblegum</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/bootstrap.min.css"/>
         <style>
         body {
-            margin: 0;
+            margin: 12px;
             background-color: #ffd1dc;
         }
         .navbar {
-            background-color: #b8ffc2;
-        }
-        .border {
-            background-color: #b8ffc2;
-            height: 80px;
-        }
-        .main {
             background-color: #c4d1ff;
+            font-family: monospace;
+            font-size: 3vw;
+        }
+        .main-top {
+            background-color: #b8ffc2;
+            padding: 15px;
+            font-family: monospace;
+            font-size: 3vw;
+            display: flex;
+            justify-content: center;
+            
+        }
+        .main-bottom {
+            background-color: #ffecb8;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            padding: 20px 0px 10px 0px;
         }
+        {% comment %} .bio:hover { {% endcomment %}
+        }
+
+
         .intro {
+            margin: 15px 0px 15px 0px;
             display: flex;
             align-self: center;
-            font-size: 2.5vw;
+            font-size: 2.8vw;
             font-family: monospace;
             overflow: hidden;
             border-right: .20em solid purple;
@@ -36,8 +49,8 @@
             margin: 0, auto;
             letter-spacing: 0.08em;
             animation:
-                typing 3s steps(40, end),
-                blink-caret .75s step-end infinite;
+                typing 2.1s steps(40, end),
+                blink-caret .65s step-end infinite;
         }
         @keyframes typing {
             from { width: 0 }
@@ -47,20 +60,32 @@
             from, to {border-color: transparent}
             50% {border-color: purple;}
         }
+      
+        }
         </style>
         <script scr="js/bootstrap.min.js"></script>
     </head>
     <body>
         <div class="container navbar">
-            <a href="#">K3Art</a>
-            <a href="#">K3StickyBBG</a>
+            <a class="btn btn-link" type="button" href="https://instagram.com/_k3_art_?igshid=189pmufulpnig">
+                <img src="/images/ig.png" style="max-width: 48px;"></img>
+            </a>
+            <a class="btn btn-" type="button" href="#">
+                <img src="/images/sbbg.png" style="max-width: 50px;"></img>
+            </a>
+            <div class="w-100"></div>
+            <a href="#">@_k3_art</a>
+            <a href="#">@stiikybubblegum</a>
         </div>
-        <div class="container main">
-            <img src="images/k3.jpg" style="max-width: 200px; display: flex; align-self: center"></img>
+        <div class="container main-top">
+            <p>stiickybubblegum will be launching its sticker packs in dec 2020!</p>
+        </div>
+        <div class="container main-bottom">
+            <img class="bio" src="images/k3.jpg" style="max-width: 200px; display: flex; align-self: center; border-radius: 30px;"></img>
             <div class="intro">Artist . Designer . Creator . Maker . Architect</div>
         </div>
         <div class="container navbar">
-            <a href="#">Next</a>
+            <a href="contactme.html">contact me</a>
         </div>
     </body>
 </html>
