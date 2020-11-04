@@ -7,67 +7,95 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Eczar&family=Montserrat&display=swap" rel="stylesheet">
+
         <style>
-        body {
-            margin: 12px;
-            background-color: #ffd1dc;
-        }
-        .navbar {
-            background-color: #c4d1ff;
-            font-family: monospace;
-            font-size: 3vw;
-        }
-        .main-top {
-            background-color: #b8ffc2;
-            padding: 15px;
-            font-family: monospace;
-            font-size: 3vw;
-            display: flex;
-            justify-content: center;
+            body {
+                margin: 12px;
+                background-color: #ffd1dc;
+                }
+            .navbar {
+                background-color: #c4d1ff;
+                font-family: Eczar;
+                font-size: 80%;
+                }
+            .main-top {
+                padding: 5px;
+                background-color: #b8ffc2;
+                font-family: Montserrat;
+                font-size: 80%;
+    
+                }
+            .main-bottom {
+                background-color: #ffecb8;
+                height: 75vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 5px 0px 5px 0px;
+                }
+            .bioflip {
+                width: 200px;
+                height: 356px;
+                perspective: 800px;
+                }
+            .bioflipcard{
+                width:100%;
+                height: 100%;
+                position: relative;
+                transition: transform 0.8s;
+                transform-style: preserve-3d;
+                }
+            .card {
+                position: absolute;
+                border-radius: 30px;
+                height: 100%;
+                width: 100%;
+                backface-visibility: hidden;
+            }
+            .bio-back {
+                background-color: #ffb8c8;
+                color: purple;
+                font-family: Eczar;
+                justify-content: center;
+                align-self: center;
+                transform: rotateY(180deg);
+                }
             
-        }
-        .main-bottom {
-            background-color: #ffecb8;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 20px 0px 10px 0px;
-        }
-        {% comment %} .bio:hover { {% endcomment %}
-        }
+            .bioflip:hover .bioflipcard {
+                transform: rotateY(180deg);
+                }
 
-
-        .intro {
-            margin: 15px 0px 15px 0px;
-            display: flex;
-            align-self: center;
-            font-size: 2.8vw;
-            font-family: monospace;
-            overflow: hidden;
-            border-right: .20em solid purple;
-            white-space: nowrap;
-            margin: 0, auto;
-            letter-spacing: 0.08em;
-            animation:
-                typing 2.1s steps(40, end),
-                blink-caret .65s step-end infinite;
-        }
-        @keyframes typing {
-            from { width: 0 }
-            to {width: 100%}
-        }
-        @keyframes blink-caret {
-            from, to {border-color: transparent}
-            50% {border-color: purple;}
-        }
-      
-        }
+            .intro {
+                margin: 20px 0px 5px 0px;
+                display: flex;
+                align-self: center;
+                font-size: 3vw;
+                font-family: Montserrat;
+                overflow: hidden;
+                border-right: .20em solid purple;
+                white-space: nowrap;
+                margin: 0, auto;
+                letter-spacing: 0.08em;
+                animation:
+                    typing 2.1s steps(40, end),
+                    blink-caret .65s step-end infinite;
+                }
+            @keyframes typing {
+                from { width: 0 }
+                to {width: 100%}
+                }
+            @keyframes blink-caret {
+                from, to {border-color: transparent}
+                50% {border-color: purple;}
+                }
         </style>
         <script scr="js/bootstrap.min.js"></script>
     </head>
     <body>
         <div class="container navbar">
-            <a class="btn btn-link" type="button" href="https://instagram.com/_k3_art_?igshid=189pmufulpnig">
+            <a class="btn btn-link" type="button" href="https://instagram.com/_k3_art_?igshid=189pmufulpnig" target="_blank">
                 <img src="/images/ig.png" style="max-width: 48px;"></img>
             </a>
             <a class="btn btn-" type="button" href="#">
@@ -78,10 +106,19 @@
             <a href="#">@stiikybubblegum</a>
         </div>
         <div class="container main-top">
-            <p>stiickybubblegum will be launching its sticker packs in dec 2020!</p>
+            <p class="text-center">stiickybubblegum will be launching its sticker packs in dec 2020!</p>
         </div>
         <div class="container main-bottom">
-            <img class="bio" src="images/k3.jpg" style="max-width: 200px; display: flex; align-self: center; border-radius: 30px;"></img>
+            <div class="bioflip">
+                <div class="bioflipcard">
+                    <div class="card bio-front">
+                        <img src="images/k3.jpg" style="max-width: 200px; border-radius:30px;"></img>
+                    </div>
+                    <div class="card bio-back p-3">
+                        <p class ="text-center">Hi! My name is Kaytrinh. I am a budding artist, a figure skater, a violinist and a future architect. I hope my designs of <span class="text-info">stiikybubblegum</span> stickies brings some joy, fun and cuteness into your everyday living.</p>
+                    </div>
+                </div>
+            </div>
             <div class="intro">Artist . Designer . Creator . Maker . Architect</div>
         </div>
         <div class="container navbar">
